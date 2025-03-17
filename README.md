@@ -6,4 +6,4 @@
 <img src="irispicture.png">
 
 ## 동작화면 예시 ##
-<img src="iriscap.png">
+<img src="iris_sc.png">

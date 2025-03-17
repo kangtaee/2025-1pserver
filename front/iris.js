@@ -7,9 +7,9 @@ pw = document.getElementById("pw")
 
   var data = {
     'sepal_length': sl.value,
-        'sepal_width': sw.value,
-        'petal_length': pl.value,
-        'petal_width': pw.value,
+    'sepal_width': sw.value,
+    'petal_length': pl.value,
+    'petal_width': pw.value,
   }
 
   $.ajax({
@@ -20,13 +20,20 @@ pw = document.getElementById("pw")
         "Content-Type": "application/json",
         },
     data: JSON.stringify(data),
+
   }).done(function(response) {
-        txtOut.value = response.prediction
+
+        txtOut.value = response.prediction + "  " + response.probability
+
         console.log(response)
-        txtOut.value = response.prediction + " 일 확률:" + response.probability
 
-  }).fail(function(response) {
-    alert("fail " + response)
-  }).always()
+
+  }).fail(function(error) {
+    alert("!/js/user.js에서 에러발생: " + error.statusText);
+    console.log(error)
+  }).always(function(r){
+    console.log("always" + r)
+  });
+
+
 }
-
