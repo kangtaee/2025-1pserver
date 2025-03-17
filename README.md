@@ -17,7 +17,7 @@
  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 
 
-## fastAPI를 이용한 붓꽃 분류시스템을 차근차근 만들어봄
+## FASTAPI를 이용한 붓꽃 분류시스템 만들기
 
 <img src="irispicture.png">
 
